@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEED Token Documentation - Technical Guide</title>
+    <meta name="description" content="Complete technical documentation for DEED Token, including API references, integration guides, and developer resources.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏡</text></svg>">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">🏡</span>
+                <span class="logo-text">DEED</span>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="whitepaper.html" class="nav-link">Whitepaper</a>
+                <a href="docs.html" class="nav-link active">Documentation</a>
+                <a href="https://pump.fun" target="_blank" class="buy-button">Buy $DEED</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Documentation Content -->
+    <section class="docs-content">
+        <div class="container">
+            <div class="docs-layout">
+                <!-- Sidebar Navigation -->
+                <div class="docs-sidebar">
+                    <h3>Documentation</h3>
+                    <nav class="docs-nav">
+                        <div class="nav-section">
+                            <h4>Getting Started</h4>
+                            <ul>
+                                <li><a href="#overview">Overview</a></li>
+                                <li><a href="#quick-start">Quick Start</a></li>
+                                <li><a href="#buying-deed">Buying DEED</a></li>
+                            </ul>
+                        </div>
+                        <div class="nav-section">
+                            <h4>Core Concepts</h4>
+                            <ul>
+                                <li><a href="#how-it-works">How It Works</a></li>
+                                <li><a href="#tokenomics">Tokenomics</a></li>
+                                <li><a href="#properties">Property System</a></li>
+                            </ul>
+                        </div>
+                        <div class="nav-section">
+                            <h4>Features</h4>
+                            <ul>
+                                <li><a href="#transparency">Transparency</a></li>
+                                <li><a href="#governance">Governance</a></li>
+                                <li><a href="#buybacks">Buyback Mechanism</a></li>
+                            </ul>
+                        </div>
+                        <div class="nav-section">
+                            <h4>Technical</h4>
+                            <ul>
+                                <li><a href="#contracts">Smart Contracts</a></li>
+                                <li><a href="#api">API Reference</a></li>
+                                <li><a href="#integrations">Integrations</a></li>
+                            </ul>
+                        </div>
+                        <div class="nav-section">
+                            <h4>Community</h4>
+                            <ul>
+                                <li><a href="#governance-participation">Participation</a></li>
+                                <li><a href="#voting">Voting Guide</a></li>
+                                <li><a href="#support">Support</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+
+                <!-- Main Content -->
+                <div class="docs-main">
+                    <div class="docs-header">
+                        <h1>DEED Token Documentation</h1>
+                        <p>Complete guide to understanding, buying, and participating in the DEED ecosystem</p>
+                        <div class="docs-meta">
+                            <span class="version">v1.0.0</span>
+                            <span class="updated">Last updated: September 2024</span>
+                        </div>
+                    </div>
+
+                    <!-- Getting Started -->
+                    <section class="docs-section" id="overview">
+                        <h2>Overview</h2>
+                        <p>DEED Token ($DEED) is a revolutionary cryptocurrency that bridges the gap between meme coin speculation and real-world real estate investment. Unlike traditional meme coins, DEED creates tangible value by converting trading rewards into income-generating properties.</p>
+                        
+                        <div class="feature-grid">
+                            <div class="feature-card">
+                                <div class="feature-icon">🏠</div>
+                                <h3>Real Estate Backed</h3>
+                                <p>Every DEED token is backed by actual real estate properties generating rental income</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">💰</div>
+                                <h3>Revenue Sharing</h3>
+                                <p>Rental income funds token buybacks, creating sustainable value for holders</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">🗳️</div>
+                                <h3>Community Governance</h3>
+                                <p>Token holders vote on property acquisitions and strategic decisions</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">📊</div>
+                                <h3>Full Transparency</h3>
+                                <p>Public tracking of all funds, properties, and rental income</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="docs-section" id="quick-start">
+                        <h2>Quick Start</h2>
+                        <p>Get started with DEED Token in just a few simple steps:</p>
+                        
+                        <div class="step-guide">
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h3>Set Up Wallet</h3>
+                                    <p>Install a Solana-compatible wallet like Phantom or Solflare</p>
+                                    <div class="code-block">
+                                        <code>Download: phantom.app or solflare.com</code>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h3>Fund Your Wallet</h3>
+                                    <p>Add SOL to your wallet for trading fees and purchases</p>
+                                    <div class="code-block">
+                                        <code>Minimum: ~0.01 SOL for fees</code>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h3>Buy DEED</h3>
+                                    <p>Visit Pump.fun and search for DEED token</p>
+                                    <div class="button-group">
+                                        <a href="https://pump.fun" target="_blank" class="btn-primary">Buy on Pump.fun</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">4</div>
+                                <div class="step-content">
+                                    <h3>Join Community</h3>
+                                    <p>Connect with other DEED holders and stay updated</p>
+                                    <div class="button-group">
+                                        <a href="https://t.me/deedtoken" target="_blank" class="btn-secondary">Join Telegram</a>
+                                        <a href="https://twitter.com/deedtoken" target="_blank" class="btn-secondary">Follow Twitter</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="docs-section" id="buying-deed">
+                        <h2>Buying DEED</h2>
+                        <h3>Supported Platforms</h3>
+                        <div class="platform-list">
+                            <div class="platform">
+                                <h4>🚀 Pump.fun (Primary)</h4>
+                                <p>The main trading platform for DEED with the best liquidity</p>
+                                <a href="https://pump.fun" target="_blank" class="platform-link">Trade Now →</a>
+                            </div>
+                        </div>
+
+                        <h3>Trading Tips</h3>
+                        <ul>
+                            <li><strong>Slippage:</strong> Set 1-3% slippage for smooth transactions</li>
+                            <li><strong>Gas Fees:</strong> Keep some SOL for transaction fees</li>
+                            <li><strong>Market Hours:</strong> 24/7 trading available</li>
+                            <li><strong>Minimum Buy:</strong> No minimum purchase amount</li>
+                        </ul>
+                    </section>
+
+                    <section class="docs-section" id="how-it-works">
+                        <h2>How DEED Works</h2>
+                        <p>DEED operates on a unique mechanism that converts meme coin activity into real estate wealth:</p>
+                        
+                        <div class="mechanism-diagram">
+                            <div class="mechanism-step">
+                                <div class="step-icon">💰</div>
+                                <h4>Creator Rewards</h4>
+                                <p>Trading volume on Pump.fun generates creator rewards</p>
+                            </div>
+                            <div class="arrow">→</div>
+                            <div class="mechanism-step">
+                                <div class="step-icon">🏠</div>
+                                <h4>Property Purchase</h4>
+                                <p>Rewards fund acquisition of rental properties</p>
+                            </div>
+                            <div class="arrow">→</div>
+                            <div class="mechanism-step">
+                                <div class="step-icon">💵</div>
+                                <h4>Rental Income</h4>
+                                <p>Properties generate monthly rental revenue</p>
+                            </div>
+                            <div class="arrow">→</div>
+                            <div class="mechanism-step">
+                                <div class="step-icon">🚀</div>
+                                <h4>Token Buybacks</h4>
+                                <p>Rental profits fund DEED buybacks and burns</p>
+                            </div>
+                        </div>
+
+                        <h3>Revenue Allocation</h3>
+                        <div class="allocation-chart">
+                            <div class="allocation-item">
+                                <div class="percentage">50%</div>
+                                <div class="description">
+                                    <h4>Token Buybacks</h4>
+                                    <p>Used to buy and burn DEED tokens, reducing supply</p>
+                                </div>
+                            </div>
+                            <div class="allocation-item">
+                                <div class="percentage">30%</div>
+                                <div class="description">
+                                    <h4>Property Management</h4>
+                                    <p>Maintenance, repairs, and professional management</p>
+                                </div>
+                            </div>
+                            <div class="allocation-item">
+                                <div class="percentage">20%</div>
+                                <div class="description">
+                                    <h4>Expansion Fund</h4>
+                                    <p>Reserved for acquiring additional properties</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="docs-section" id="properties">
+                        <h2>Property System</h2>
+                        <h3>Selection Criteria</h3>
+                        <p>DEED targets properties that meet strict investment criteria:</p>
+                        <ul>
+                            <li><strong>Positive Cash Flow:</strong> Must generate rental income from day one</li>
+                            <li><strong>Growing Markets:</strong> Located in areas with increasing rental demand</li>
+                            <li><strong>Low Maintenance:</strong> Properties requiring minimal ongoing investment</li>
+                            <li><strong>Professional Management:</strong> Access to reliable property management services</li>
+                            <li><strong>Appreciation Potential:</strong> Markets with strong long-term growth prospects</li>
+                        </ul>
+
+                        <h3>Current Portfolio</h3>
+                        <div class="property-showcase">
+                            <div class="property-item">
+                                <h4>🏠 Property #1: Desert Hot Springs, CA</h4>
+                                <div class="property-details">
+                                    <div class="detail"><strong>Type:</strong> Park Model Home</div>
+                                    <div class="detail"><strong>Size:</strong> 2 bed, 1 bath, 565 sqft</div>
+                                    <div class="detail"><strong>Price:</strong> $67,000</div>
+                                    <div class="detail"><strong>Status:</strong> Acquiring</div>
+                                </div>
+                                <a href="https://www.zillow.com/homedetails/16400-Bubbling-Wells-Rd-69-Desert-Hot-Springs-CA-92240/2052887109_zpid/" target="_blank" class="property-link">View Details →</a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="docs-section" id="transparency">
+                        <h2>Transparency</h2>
+                        <p>DEED maintains complete transparency through multiple channels:</p>
+                        
+                        <h3>Public Tracking</h3>
+                        <ul>
+                            <li><strong>Wallet Monitoring:</strong> All funds tracked on public blockchain</li>
+                            <li><strong>Property Documentation:</strong> Photos, deeds, and purchase records</li>
+                            <li><strong>Financial Reports:</strong> Monthly income and expense statements</li>
+                            <li><strong>Property Management:</strong> Third-party management company reports</li>
+                        </ul>
+
+                        <h3>Reporting Schedule</h3>
+                        <div class="schedule-grid">
+                            <div class="schedule-item">
+                                <h4>📅 Monthly</h4>
+                                <p>Rental income reports and property updates</p>
+                            </div>
+                            <div class="schedule-item">
+                                <h4>📊 Quarterly</h4>
+                                <p>Comprehensive financial statements and portfolio analysis</p>
+                            </div>
+                            <div class="schedule-item">
+                                <h4>🏠 Property Events</h4>
+                                <p>Real-time updates on acquisitions and major developments</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="docs-section" id="governance">
+                        <h2>Governance</h2>
+                        <h3>Voting Rights</h3>
+                        <p>DEED holders can participate in governance decisions proportional to their token holdings:</p>
+                        
+                        <div class="voting-topics">
+                            <div class="topic">
+                                <h4>🏠 Property Acquisitions</h4>
+                                <p>Vote on which properties to purchase next</p>
+                            </div>
+                            <div class="topic">
+                                <h4>💰 Revenue Allocation</h4>
+                                <p>Adjust the percentage split of rental income</p>
+                            </div>
+                            <div class="topic">
+                                <h4>🌍 Geographic Expansion</h4>
+                                <p>Decide on new markets to enter</p>
+                            </div>
+                            <div class="topic">
+                                <h4>🤝 Strategic Partnerships</h4>
+                                <p>Approve major partnerships and collaborations</p>
+                            </div>
+                        </div>
+
+                        <h3>Voting Process</h3>
+                        <ol>
+                            <li>Proposals are submitted by the team or community members</li>
+                            <li>Discussion period allows community feedback</li>
+                            <li>Voting opens for 7 days using Snapshot</li>
+                            <li>Results are implemented transparently</li>
+                        </ol>
+                    </section>
+
+                    <section class="docs-section" id="api">
+                        <h2>API Reference</h2>
+                        <p>Access DEED data programmatically through our REST API:</p>
+                        
+                        <h3>Base URL</h3>
+                        <div class="code-block">
+                            <code>https://api.deed.homes/v1/</code>
+                        </div>
+
+                        <h3>Endpoints</h3>
+                        <div class="endpoint">
+                            <div class="method">GET</div>
+                            <div class="path">/token-data</div>
+                            <p>Returns current token price, market cap, and trading data</p>
+                        </div>
+                        <div class="endpoint">
+                            <div class="method">GET</div>
+                            <div class="path">/properties</div>
+                            <p>Lists all properties in the DEED portfolio</p>
+                        </div>
+                        <div class="endpoint">
+                            <div class="method">GET</div>
+                            <div class="path">/income</div>
+                            <p>Returns rental income data and buyback information</p>
+                        </div>
+
+                        <h3>Example Response</h3>
+                        <div class="code-block">
+<pre><code>{
+  "token": {
+    "symbol": "DEED",
+    "price": "$0.0023",
+    "change24h": "+24.7%",
+    "marketCap": "$847K"
+  },
+  "properties": [
+    {
+      "id": 1,
+      "address": "16400 Bubbling Wells Rd #69",
+      "city": "Desert Hot Springs, CA",
+      "status": "acquiring",
+      "price": 67000
+    }
+  ]
+}</code></pre>
+                        </div>
+                    </section>
+
+                    <section class="docs-section" id="support">
+                        <h2>Support</h2>
+                        <h3>Get Help</h3>
+                        <p>Need assistance? We're here to help:</p>
+                        
+                        <div class="support-channels">
+                            <div class="channel">
+                                <h4>💬 Community Support</h4>
+                                <p>Get help from other DEED holders</p>
+                                <a href="https://t.me/deedtoken" target="_blank" class="support-link">Join Telegram →</a>
+                            </div>
+                            <div class="channel">
+                                <h4>📧 Technical Support</h4>
+                                <p>Direct support for technical issues</p>
+                                <a href="mailto:support@deed.homes" class="support-link">Email Support →</a>
+                            </div>
+                            <div class="channel">
+                                <h4>🐛 Bug Reports</h4>
+                                <p>Report website or technical bugs</p>
+                                <a href="mailto:bugs@deed.homes" class="support-link">Report Bug →</a>
+                            </div>
+                        </div>
+
+                        <h3>FAQ</h3>
+                        <div class="faq">
+                            <div class="faq-item">
+                                <h4>How often are buybacks executed?</h4>
+                                <p>Buybacks occur monthly using 50% of rental income from all properties.</p>
+                            </div>
+                            <div class="faq-item">
+                                <h4>Can I visit the properties?</h4>
+                                <p>Properties are managed by professional companies, but we provide regular updates and photos.</p>
+                            </div>
+                            <div class="faq-item">
+                                <h4>What happens if a property becomes vacant?</h4>
+                                <p>Professional property management handles tenant placement. Vacancy periods are factored into projections.</p>
+                            </div>
+                            <div class="faq-item">
+                                <h4>How is governance implemented?</h4>
+                                <p>Governance uses Snapshot for voting, with results implemented transparently by the team.</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-icon">🏡</span>
+                        <span class="logo-text">DEED</span>
+                    </div>
+                    <p>From memes to mansions, claim your DEED in the future of real estate.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Project</h4>
+                        <a href="index.html">Home</a>
+                        <a href="whitepaper.html">Whitepaper</a>
+                        <a href="docs.html">Documentation</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Community</h4>
+                        <a href="https://t.me/deedtoken" target="_blank">Telegram</a>
+                        <a href="https://twitter.com/deedtoken" target="_blank">Twitter</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Resources</h4>
+                        <a href="whitepaper.html">Whitepaper</a>
+                        <a href="docs.html">Documentation</a>
+                        <a href="index.html#property-tracker">Property Tracker</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 DEED Token. Building the future of meme-backed real estate.</p>
+                <div class="footer-disclaimer">
+                    <small>Cryptocurrency investments are subject to market risk. Please invest responsibly.</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
