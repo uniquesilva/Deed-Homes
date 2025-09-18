@@ -1,0 +1,38 @@
+{
+  "name": "deed-homes",
+  "version": "1.0.0",
+  "description": "DEED Token - From Memes to Mansions. The first meme coin that turns Pump.fun creator rewards into real estate.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "build": "echo 'No build step required for static site'",
+    "test": "echo 'No tests specified'"
+  },
+  "keywords": [
+    "deed",
+    "token",
+    "cryptocurrency",
+    "real-estate",
+    "meme-coin",
+    "pump-fun",
+    "defi"
+  ],
+  "author": "DEED Token Team",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "compression": "^1.7.4",
+    "helmet": "^7.1.0",
+    "cors": "^2.8.5"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/deed-homes.git"
+  },
+  "homepage": "https://deed.homes"
+}
